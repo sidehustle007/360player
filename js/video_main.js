@@ -1,7 +1,7 @@
 const videoContainer = document.querySelector(".video-container");
 
 const searchParams = new URLSearchParams(window.location.search);
-const paraimgurl = searchParams.get("url");
+const paravidurl = searchParams.get("url");
 const parashowcontroller = searchParams.get("hidemenu");
 const paraautorotate = searchParams.get("autorotate");
 const paraautorotatespeed = searchParams.get("autorotatespeed");

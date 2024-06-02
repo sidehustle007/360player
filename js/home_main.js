@@ -20,12 +20,12 @@ const imgroute = "page/photo.html?url=";
 
 function updateVidUrl() {
   const urlInput = document.getElementById("urlInput");
-  const newUrl = vidroute + urlInput.value;
+  const newUrl = urlInput.value ? vidroute + urlInput.value : "page/video.html";
   window.open(newUrl, "_blank");
 }
 
 function updateImgUrl() {
   const urlInput = document.getElementById("urlInput");
-  const newUrl = imgroute + urlInput.value;
+  const newUrl = urlInput.value ? imgroute + urlInput.value : "page/photo.html";
   window.open(newUrl, "_blank");
 }
