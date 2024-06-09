@@ -15,17 +15,22 @@ const viewer = new PANOLENS.Viewer({
 
 viewer.add(panoramaImage);
 
-const vidroute = "page/video.html?url=";
-const imgroute = "page/photo.html?url=";
+// router without query
+const vidroutemain = "player/video.html";
+const imgroutemain = "player/photo.html";
+
+// router with query
+const vidroute = "player/video.html?url=";
+const imgroute = "player/photo.html?url=";
 
 function updateVidUrl() {
   const urlInput = document.getElementById("urlInput");
-  const newUrl = urlInput.value ? vidroute + urlInput.value : "page/video.html";
+  const newUrl = urlInput.value ? vidroute + urlInput.value : vidroutemain;
   window.open(newUrl, "_blank");
 }
 
 function updateImgUrl() {
   const urlInput = document.getElementById("urlInput");
-  const newUrl = urlInput.value ? imgroute + urlInput.value : "page/photo.html";
+  const newUrl = urlInput.value ? imgroute + urlInput.value : imgroutemain;
   window.open(newUrl, "_blank");
 }
